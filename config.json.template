@@ -1,0 +1,8 @@
+{
+"username": "xxx",
+"password": "xxxx",
+"imap": {
+  "host": "xxxxxx",
+  "port": "143"
+}
+}

@@ -1,0 +1,4 @@
+# Resources
+
+ * https://gist.github.com/bergie/1226809
+ * https://github.com/a-sk/node-imapnotify/blob/master/bin/imapnotify
