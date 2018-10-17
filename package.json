@@ -3,6 +3,10 @@
   "version": "0.0.01",
   "description": "Using email as chat system",
   "author": "Peter Schrammel",
-  "private": true
-
+  "private": true,
+  "dependencies": {
+    "emailjs": "^2.2.0",
+    "imap": "^0.8.19",
+    "mailparser": "^2.3.4"
+  }
 }
