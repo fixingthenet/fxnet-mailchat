@@ -1,0 +1,8 @@
+{
+  "name": "fxnet-mailchat",
+  "version": "0.0.01",
+  "description": "Using email as chat system",
+  "author": "Peter Schrammel",
+  "private": true
+
+}

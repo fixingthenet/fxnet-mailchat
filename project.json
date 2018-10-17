@@ -1,0 +1,10 @@
+{
+  "project": "fxnet-mailchat",
+    
+  "git": "github.com/fixingthenet/fxnet-mailchat",
+  "path": "fxnet-mailchat",
+  "docker": {
+    "repo": "fxnet",
+    "name": "fxnet-mailchat"
+  }
+}
