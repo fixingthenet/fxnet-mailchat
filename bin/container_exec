@@ -7,5 +7,5 @@ path=`jq -r ".path" "$prj_file"`
 repo=`jq -r ".docker.repo" "$prj_file"`
 project=`jq -r ".docker.name" "$prj_file"`
 
-`aws ecr get-login --region eu-west-1 --no-include-email`
+#`aws ecr get-login --region eu-west-1 --no-include-email`
 docker run -ti --rm  -v /vagrant/apps/$path:/code $repo/$project:latest /bin/bash

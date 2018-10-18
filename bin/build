@@ -13,8 +13,10 @@ ACTION=${1:-build}
 
 # TODO: only if aws
 repo_login() {
-  `aws ecr get-login --region eu-west-1 --no-include-email`
+#  `aws ecr get-login --region eu-west-1 --no-include-email`
+  echo "login"
 }
+
 if [ "$ACTION" == "build" ]; then
   repo_login
   docker build -t $repo/$project:latest $app_dir

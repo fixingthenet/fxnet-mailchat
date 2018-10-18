@@ -7,7 +7,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var fs = require("fs");
 var config = JSON.parse(fs.readFileSync(process.cwd()+"/config.json", "utf-8"));
 
-var server=function() { 
+var server=function() {
   return new Imap(
     {user: config.username,
     password: config.password,
@@ -33,7 +33,7 @@ function fetchBySeq(seq) {
     console.log("fetching:",seq)
 
     var f = imap.seq.fetch(seq, {
-      bodies: 'HEADER.FIELDS (FROM TO SUBJECT DATE)',
+      bodies: 'HEADER',
       struct: true
     });
     f.on('error', function(error) {
