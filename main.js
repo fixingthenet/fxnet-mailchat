@@ -1,11 +1,18 @@
-var Imap = require("imap");
-var inspect = require('util').inspect;
+import Imap from "imap";
+import {inspect} from 'util';
 var mailparser = require("mailparser");
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 var fs = require("fs");
-var config = JSON.parse(fs.readFileSync(process.cwd()+"/config.json", "utf-8"));
+var configFilename=process.cwd()+"/config.json";
+var config = JSON.parse(fs.readFileSync(configFilename, "utf-8"));
+
+var watcher=fs.watch("/code/test.txt")
+watcher.on("change", (event,filename) => {
+  console.log("fs:",event, filename)
+})
+
 
 var server=function() {
   return new Imap(

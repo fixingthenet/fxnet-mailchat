@@ -8,5 +8,9 @@
     "emailjs": "^2.2.0",
     "imap": "^0.8.19",
     "mailparser": "^2.3.4"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
   }
 }

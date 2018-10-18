@@ -2,3 +2,40 @@
 
  * https://gist.github.com/bergie/1226809
  * https://github.com/a-sk/node-imapnotify/blob/master/bin/imapnotify
+
+# Concept
+
+Have a chat system that
+ * works over SMTP
+ * could work with anybody using email (even if not using this chat system)
+ * distributed
+ 
+Requirements:
+ * support normal emails 
+ * generate normal emails
+ * cut footers
+ * inline previews
+ * link to originals/serve originals
+ * groups (try to keep privacy if possible)
+ * connect (don't accept every email/sender)
+ * support arbitrary attachments (location, text, image, audio)
+ * calculate delay (send/receive)
+
+Important headers:
+ * references, in-repy-to
+ * x-fxnet-chatmail
+ * subject (needed at all?)
+ * from, to, return-path
+
+## transport layer:
+ * resync on start (fetch every mail since last seen)
+ * listen to new mails
+ * receive: from any mail that has "x-fxnet-chatmail" header extract the message to storage
+ * send: package message to mail, set header, send over smtp server
+
+## Storage
+ * storage for any file
+ * messages
+
+## Message
+ * 
